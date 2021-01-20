@@ -8,6 +8,6 @@
 [pushover orb]: https://circleci.com/developer/orbs/orb/masutaka/pushover
 [license]: https://github.com/masutaka/pushover-orb/blob/master/LICENSE.txt
 
-CircleCI orb for [Pushover](https://pushover.net/).
+CircleCI Orb for sending push notifications with [Pushover](https://pushover.net/)
 
 See https://circleci.com/orbs/registry/orb/masutaka/pushover
