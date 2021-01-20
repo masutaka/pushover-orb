@@ -13,3 +13,21 @@ workflows:
           requires:
             - orb-tools/lint
             - orb-tools/pack
+      # If the commit message contains the below, it will publish the new version and git-push new tag.
+      #  [semver:major]
+      #  [semver:minor]
+      #  [semver:patch]
+      # If the commit message contains the below or not, it will not publish the new version and not git-push new tag.
+      #  [semver:skip]
+      - orb-tools/dev-promote-prod-from-commit-subject:
+          name: dev-promote-semver
+          add-pr-comment: false
+          fail-if-semver-not-indicated: false
+          orb-name: masutaka/pushover
+          publish-version-tag: true
+          ssh-fingerprints: d2:88:2c:c4:ff:9e:d9:c5:77:1d:44:58:99:e2:09:56 # User Key on https://app.circleci.com/settings/project/github/masutaka/pushover-orb/ssh
+          requires:
+            - orb-tools/publish-dev
+          filters:
+            branches:
+              only: master
