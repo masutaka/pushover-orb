@@ -9,6 +9,15 @@ usage:
     # see. https://github.com/masutaka/pushover-orb/releases
     pushover: masutaka/pushover@x
 
+    # or
+    # Set specific version to `x.y.z`
+    # see. https://github.com/masutaka/pushover-orb/releases
+    # pushover: masutaka/pushover@x.y.z
+
+    # or
+    # Use edge version
+    # pushover: masutaka/pushover@volatile
+
   jobs:
     your-awsome-job:
       docker:
