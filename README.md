@@ -1,29 +1,13 @@
-# Pushover Orb [![CircleCI status](https://circleci.com/gh/pbrisbin/pushover-orb.svg "CircleCI status")](https://circleci.com/gh/pbrisbin/pushover-orb)
+# pushover-orb
 
-Send push notifications with [Pushover](https://pushover.net/).
+[![Build Status](https://img.shields.io/circleci/project/github/masutaka/pushover-orb/master.svg?logo=circieci&style=flat-square)][circleci]
+[![Pushover Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/masutaka/pushover)][pushover orb]
+[![License](https://img.shields.io/github/license/masutaka/pushover-orb.svg?style=flat-square)][license]
 
-## Usage
+[circleci]: https://circleci.com/gh/masutaka/pushover-orb
+[pushover orb]: https://circleci.com/developer/orbs/orb/masutaka/pushover
+[license]: https://github.com/masutaka/pushover-orb/blob/master/LICENSE.txt
 
-```yaml
-version: 2.1
+CircleCI orb for [Pushover](https://pushover.net/).
 
-orbs:
-  pushover: pbrisbin/pushover@x.y
-
-workflows:
-  commit:
-    jobs:
-      # ...
-
-      - pushover/notify:
-          name: notify
-          title: '$CIRCLE_PROJECT_REPONAME'
-          message: 'Released version ${CIRCLE_SHA1:0:10}'
-          requires: [release]
-```
-
-See [all examples](./src/examples/).
-
----
-
-[LICENSE](./LICENSE) | [CHANGELOG](./CHANGELOG.md)
+See https://circleci.com/orbs/registry/orb/masutaka/pushover
