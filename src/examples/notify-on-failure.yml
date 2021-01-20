@@ -5,7 +5,9 @@ usage:
   version: 2.1
 
   orbs:
-    pushover: pbrisbin/pushover@x.y
+    # Set major version to `x`
+    # see. https://github.com/masutaka/pushover-orb/releases
+    pushover: masutaka/pushover@x
 
   jobs:
     your-awsome-job:

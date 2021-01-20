@@ -4,4 +4,4 @@ description: |
   Send push notifications with Pushover
 
 display:
-  source_url: https://github.com/pbrisbin/pushover-orb
+  source_url: https://github.com/masutaka/pushover-orb
